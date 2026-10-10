@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avis des personnes accompagnées</title>
+<link rel="stylesheet" href="style.css?v=4">
+<style>
+  body.public { background: transparent; }
+  .page { padding-top: 8px; padding-bottom: 8px; }
+</style>
+</head>
+<body class="public integre">
+
+<main class="page large">
+  <div class="colonnes" id="colonnes">
+    <section class="col" data-metier="vie" aria-labelledby="t-vie">
+      <div class="col-tete">
+        <span class="ico"><img src="img/logo-vie.png" alt="" width="64" height="58"></span>
+        <div class="col-titre"><h2 id="t-vie">Assistant de vie</h2><p class="sous">Accompagnement à domicile</p></div>
+        <div class="col-chiffres" id="ch-vie"></div>
+      </div>
+      <div class="col-synthese" id="sy-vie"></div>
+      <details class="col-moyennes" id="mo-vie"><summary>Moyennes par critère</summary><ul class="barres" id="ba-vie"></ul></details>
+      <div class="col-liste" id="li-vie" aria-live="polite"></div>
+    </section>
+
+    <section class="col" data-metier="info" aria-labelledby="t-info">
+      <div class="col-tete">
+        <span class="ico"><img src="img/logo-info.png" alt="" width="54" height="64"></span>
+        <div class="col-titre"><h2 id="t-info">Assistance informatique</h2><p class="sous">Dépannage et conseils informatiques</p></div>
+        <div class="col-chiffres" id="ch-info"></div>
+      </div>
+      <div class="col-synthese" id="sy-info"></div>
+      <details class="col-moyennes" id="mo-info"><summary>Moyennes par critère</summary><ul class="barres" id="ba-info"></ul></details>
+      <div class="col-liste" id="li-info" aria-live="polite"></div>
+    </section>
+  </div>
+  <p class="fonctionnement">Avis déposés librement par les personnes concernées, non vérifiés, supprimés automatiquement après 2 ans.</p>
+</main>
+
+<script>
+  /* Option : ?metier=vie ou ?metier=info n’affiche qu’une seule prestation */
+  (function () {
+    try {
+      var m = new URLSearchParams(location.search).get("metier");
+      if (m === "vie" || m === "info") {
+        var autre = document.querySelector('.col[data-metier="' + (m === "vie" ? "info" : "vie") + '"]');
+        if (autre) { autre.parentNode.removeChild(autre); }
+        document.getElementById("colonnes").classList.add("une-colonne");
+      }
+    } catch (e) { /* tout est affiché */ }
+  })();
+</script>
+<script src="config.js?v=4"></script>
+<script src="metiers.js?v=4"></script>
+<script src="commun.js?v=4"></script>
+<script src="index.js?v=4"></script>
+</body>
+</html>

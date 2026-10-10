@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Retirer mon avis</title>
+<link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <p class="petit">Avis des personnes accompagnées</p>
+    <h1>Retirer mon avis</h1>
+    <p>Quelques informations suffisent pour retrouver votre avis.</p>
+  </div>
+</header>
+
+<main class="page">
+  <form id="form" class="carte-bloc" novalidate autocomplete="off">
+    <div class="sr" aria-hidden="true">
+      <label>Ne pas remplir <input type="text" id="hp" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <fieldset class="choix-retrait">
+      <legend>Que souhaitez-vous ?</legend>
+      <label class="radio"><input type="radio" name="action" value="avis" checked> <span><b>Supprimer mon avis en entier</b> (il disparaît de la page, avec mes coordonnées)</span></label>
+      <label class="radio"><input type="radio" name="action" value="contact"> <span><b>Garder mon avis, mais effacer mon téléphone, mon mail et mes horaires</b> (je ne suis plus référence et personne ne pourra me contacter)</span></label>
+    </fieldset>
+    <div class="duo">
+      <label class="champ">Prénom <input type="text" id="prenom" maxlength="40" autocomplete="given-name" required></label>
+      <label class="champ">Nom <input type="text" id="nom" maxlength="60" autocomplete="family-name" required></label>
+    </div>
+    <label class="champ">Commune ou ville <input type="text" id="commune" maxlength="60" required></label>
+    <label class="champ">Votre téléphone
+      <small>Facultatif. Il aide à retrouver votre avis si vous l’aviez donné, et à vous répondre si besoin. Vous pouvez laisser vide.</small>
+      <input type="tel" id="tel" maxlength="40" autocomplete="tel" inputmode="tel">
+    </label>
+    <label class="champ">Votre adresse mail <small>Facultatif</small>
+      <input type="email" id="mail" maxlength="80" autocomplete="email" inputmode="email">
+    </label>
+    <label class="champ">Un mot si vous le souhaitez <small>Facultatif</small>
+      <input type="text" id="message" maxlength="200">
+    </label>
+    <div class="info-box">Ces informations servent uniquement à retrouver votre avis et à traiter votre demande. Elles sont supprimées ensuite, et au plus tard 6 mois après votre demande. Vous pouvez aussi joindre directement Guilhem Schlosser si vous avez conservé son numéro.</div>
+    <div id="ts" style="margin:12px 0"></div>
+    <div class="erreur cache" role="alert" id="erreur"></div>
+    <div class="nav"><button type="button" class="btn" id="envoyer">Envoyer ma demande</button></div>
+  </form>
+
+  <section class="carte-bloc cache" id="merci">
+    <h2>Demande enregistrée</h2>
+    <p>Merci. Votre demande a bien été reçue. Elle sera traitée dans les meilleurs délais.</p>
+  </section>
+</main>
+
+<script src="config.js?v=8"></script>
+<script src="taille.js?v=8"></script>
+<script src="retrait.js?v=8"></script>
+</body>
+</html>

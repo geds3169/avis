@@ -1,0 +1,23 @@
+{
+ "genere": "2026-10-10T09:48:52.726Z",
+ "avis": [
+  {
+   "metier": "vie",
+   "nom": "Retrait T.",
+   "commune": "Test",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 3,
+    "c2": 4,
+    "c3": 3,
+    "c4": 4,
+    "c5": 4,
+    "c6": 3
+   },
+   "moyenne": 3.5,
+   "commentaire": "",
+   "reference": true,
+   "modes": []
+  }
+ ]
+}
