@@ -1,0 +1,169 @@
+{
+ "genere": "2026-10-17T07:46:13.698Z",
+ "avis": [
+  {
+   "metier": "vie",
+   "nom": "Tomas C.",
+   "commune": "Fonsorbes",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 4,
+    "c2": 4,
+    "c3": 4,
+    "c4": 4,
+    "c5": 4,
+    "c6": 4
+   },
+   "moyenne": 4,
+   "commentaire": "",
+   "reference": true,
+   "modes": []
+  },
+  {
+   "metier": "vie",
+   "nom": "LAYEK J.",
+   "commune": "Fontenilles",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 4,
+    "c2": 3,
+    "c3": 4,
+    "c4": 4,
+    "c5": 4,
+    "c6": 4
+   },
+   "moyenne": 3.83,
+   "commentaire": "",
+   "reference": true,
+   "modes": []
+  },
+  {
+   "metier": "info",
+   "nom": "MERIEUX P.",
+   "commune": "FONSORBES",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 4,
+    "c2": 4,
+    "c3": 4,
+    "c4": 4,
+    "c5": 4,
+    "c6": 4
+   },
+   "moyenne": 4,
+   "commentaire": "Un technicien expérimenté qui comprend vite notre demande ou nos problèmes avec rapidité.",
+   "reference": true,
+   "modes": [
+    "Sur place"
+   ]
+  },
+  {
+   "metier": "vie",
+   "nom": "S. M.",
+   "commune": "Fontenilles",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 4,
+    "c2": 4,
+    "c3": 4,
+    "c4": 4,
+    "c5": 4,
+    "c6": 4
+   },
+   "moyenne": 4,
+   "commentaire": "",
+   "reference": false,
+   "modes": []
+  },
+  {
+   "metier": "vie",
+   "nom": "Martinez C.",
+   "commune": "Fontenilles",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 4,
+    "c2": 4,
+    "c3": 4,
+    "c4": 4,
+    "c5": 4,
+    "c6": 4
+   },
+   "moyenne": 4,
+   "commentaire": "",
+   "reference": true,
+   "modes": []
+  },
+  {
+   "metier": "vie",
+   "nom": "H. F.",
+   "commune": "Fontenilles",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 4,
+    "c2": 4,
+    "c3": 4,
+    "c4": 4,
+    "c5": 4,
+    "c6": 4
+   },
+   "moyenne": 4,
+   "commentaire": "Très sociable et ponctuel, l entretien du logement a ete fait avec minutie\nOn regrette que ce ne soit plus lui qui vienne",
+   "reference": true,
+   "modes": []
+  },
+  {
+   "metier": "vie",
+   "nom": "Redonnet M.",
+   "commune": "Fontenilles",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 4,
+    "c2": 4,
+    "c3": 4,
+    "c4": 4,
+    "c5": 4,
+    "c6": 4
+   },
+   "moyenne": 4,
+   "commentaire": "Personne très agréable et efficace. A recommander.",
+   "reference": true,
+   "modes": []
+  },
+  {
+   "metier": "vie",
+   "nom": "Ferraz C.",
+   "commune": "Fonsorbes",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 4,
+    "c2": 4,
+    "c3": 4,
+    "c4": 4,
+    "c5": 4,
+    "c6": 4
+   },
+   "moyenne": 4,
+   "commentaire": "",
+   "reference": false,
+   "modes": []
+  },
+  {
+   "metier": "vie",
+   "nom": "Gimenez J.",
+   "commune": "Fonsorbes",
+   "mois": "2026-10",
+   "notes": {
+    "c1": 3,
+    "c2": 3,
+    "c3": 4,
+    "c4": 3,
+    "c5": 3,
+    "c6": 3
+   },
+   "moyenne": 3.17,
+   "commentaire": "Service à la personne en tout point remarquable .",
+   "reference": true,
+   "modes": []
+  }
+ ]
+}
