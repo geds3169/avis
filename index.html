@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avis des personnes accompagnées</title>
+<meta name="description" content="Avis laissés par les personnes accompagnées : assistant de vie et assistance informatique.">
+<link rel="stylesheet" href="style.css?v=8">
+</head>
+<body class="public">
+
+<header class="hero">
+  <div class="hero-in large">
+    <p class="petit">Avis des personnes accompagnées</p>
+    <h1>Ils m’ont fait confiance</h1>
+    <div class="carte-pro" id="carte-pro" hidden></div>
+    <p>Avis déposés librement par les personnes concernées, non vérifiés.</p>
+    <p class="saut-titre">Aller aux avis sur :</p>
+    <nav class="saut" aria-label="Aller à une prestation">
+      <a href="#t-vie" class="saut-vie"><img src="img/logo-vie-petit.png" alt="" width="26" height="24"><span>Assistant de vie</span></a>
+      <a href="#t-info" class="saut-info"><img src="img/logo-info-petit.png" alt="" width="24" height="24"><span>Assistance informatique</span></a>
+    </nav>
+  </div>
+</header>
+
+<main class="page large">
+  <p class="bandeau-info">Tous les avis sont supprimés automatiquement 2 ans après leur publication, ainsi que les données (téléphone, horaires) des personnes qui s’étaient portées volontaires comme référence.</p>
+  <p class="fonctionnement">Fonctionnement : chaque avis est déposé par la personne elle-même, depuis un formulaire accessible uniquement avec le lien ou le QR code que je lui remets. Il est publié automatiquement, sans relecture ni modification de ma part, et retiré uniquement si la personne le demande.</p>
+  <div class="colonnes">
+    <section class="col" data-metier="vie" aria-labelledby="t-vie">
+      <div class="col-tete">
+        <span class="ico"><img src="img/logo-vie.png" alt="" width="64" height="58"></span>
+        <div class="col-titre"><h2 id="t-vie">Assistant de vie</h2><p class="sous">Accompagnement à domicile</p></div>
+        <div class="col-chiffres" id="ch-vie"></div>
+      </div>
+      <div class="col-synthese" id="sy-vie"></div>
+      <details class="col-moyennes" id="mo-vie"><summary>Moyennes par critère</summary><ul class="barres" id="ba-vie"></ul></details>
+      <div class="col-liste" id="li-vie" aria-live="polite"></div>
+    </section>
+
+    <section class="col" data-metier="info" aria-labelledby="t-info">
+      <div class="col-tete">
+        <span class="ico"><img src="img/logo-info.png" alt="" width="54" height="64"></span>
+        <div class="col-titre"><h2 id="t-info">Assistance informatique</h2><p class="sous">Dépannage et conseils informatiques</p></div>
+        <div class="col-chiffres" id="ch-info"></div>
+      </div>
+      <div class="col-synthese" id="sy-info"></div>
+      <details class="col-moyennes" id="mo-info"><summary>Moyennes par critère</summary><ul class="barres" id="ba-info"></ul></details>
+      <div class="col-liste" id="li-info" aria-live="polite"></div>
+    </section>
+  </div>
+</main>
+
+<p class="pied">
+  Avis publiés avec l’accord des personnes. Retrait possible à tout moment.
+  <span id="contact"></span>
+  <br><a href="retrait.html" class="lien-retrait">Demander le retrait de mon avis</a>
+</p>
+
+<script src="config.js?v=8"></script>
+<script src="metiers.js?v=8"></script>
+<script src="commun.js?v=8"></script>
+<script src="taille.js?v=8"></script>
+<script src="index.js?v=8"></script>
+</body>
+</html>
