@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Donner votre avis</title>
+<link rel="stylesheet" href="style.css?v=8">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <a href="./" class="retour-avis">← Voir les avis</a>
+    <span class="logo-rond cache" id="h-logo"><img id="h-logo-img" src="" alt="" width="64" height="64"></span>
+    <p class="petit" id="h-petit">Attestation de suivi qualité</p>
+    <h1>Votre avis compte</h1>
+    <p id="h-accroche">Quelques minutes suffisent. Choisissez d’abord le type d’intervention.</p>
+  </div>
+</header>
+
+<main class="page">
+
+  <section class="carte-bloc cache" id="s-sans-cle">
+    <h2>Ce formulaire s’ouvre avec un lien personnel</h2>
+    <p>Pour donner votre avis, utilisez le lien ou le QR code qui vous a été remis par la personne qui est intervenue chez vous. Si vous l’avez perdu, demandez-le-lui.</p>
+    <p><a href="./" class="lien-retrait">Lire les avis déjà publiés</a></p>
+  </section>
+
+  <section class="carte-bloc" id="s-metier">
+    <h2>Quelle intervention concerne votre avis ?</h2>
+    <div class="selecteur">
+      <div class="affiche" id="affiche-metier" aria-hidden="true">Choisissez dans la liste</div>
+      <select id="metier" aria-label="Métier">
+        <option value="" selected disabled>Choisissez dans la liste</option>
+        <option value="vie">Assistant de vie</option>
+        <option value="info">Technicien d’assistance informatique</option>
+      </select>
+    </div>
+  </section>
+
+  <form id="form" class="cache" novalidate autocomplete="off">
+    <div class="progres" aria-live="polite">
+      <div class="progres-texte"><span id="p-titre"></span><span id="p-num"></span></div>
+      <div class="rail"><i id="p-rail"></i></div>
+    </div>
+
+    <div class="sr" aria-hidden="true">
+      <label>Ne pas remplir <input type="text" name="site_web" id="hp" tabindex="-1" autocomplete="off"></label>
+    </div>
+
+    <!-- Étape 1 -->
+    <section class="carte-bloc etape" data-etape="1">
+      <h2 tabindex="-1">Vos coordonnées</h2>
+      <p class="aide">Votre nom complet ne sera jamais publié.</p>
+      <div class="duo">
+        <label class="champ">Prénom
+          <input type="text" id="prenom" maxlength="40" autocomplete="given-name" required>
+        </label>
+        <label class="champ">Nom
+          <input type="text" id="nom" maxlength="60" autocomplete="family-name" required>
+        </label>
+      </div>
+      <label class="champ"><span id="l-lieu">Commune</span>
+        <input type="text" id="commune" maxlength="60" autocomplete="address-level2" required>
+      </label>
+      <div class="duo">
+        <label class="champ">Début de l’intervention
+          <small>Facultatif</small>
+          <input type="month" id="debut">
+        </label>
+        <label class="champ">Fin de l’intervention
+          <small>Facultatif</small>
+          <input type="month" id="fin">
+        </label>
+      </div>
+      <fieldset class="champ" style="border:0;padding:0;margin:0 0 8px">
+        <legend style="font-weight:600;padding:0">Comment votre nom s’affichera</legend>
+        <div class="choix">
+          <label><input type="radio" name="affichage" value="prenom" checked> <span id="ex-prenom">Dupont M.</span></label>
+          <label><input type="radio" name="affichage" value="initiales"> <span id="ex-init">D. M.</span></label>
+        </div>
+      </fieldset>
+      <label class="consent" id="bloc-ref">
+        <input type="checkbox" id="reference">
+        <span><b>Je me porte volontaire comme référence.</b> J’accepte que mon contact et les moments où l’on peut me joindre soient transmis à un futur employeur qui en ferait la demande à <span id="t-ref-resp"></span>, pour confirmer cet avis. Mon contact n’est jamais affiché sur internet : il n’est donné que directement à l’employeur, par <span id="t-ref-resp2"></span>. Un badge « Référence volontaire » s’affichera sur mon avis. <em>Vous indiquerez ensuite comment vous joindre.</em></span>
+      </label>
+      <fieldset id="bloc-horaires" class="cache horaires">
+        <legend>Pour vous joindre</legend>
+        <label class="champ">Téléphone ou adresse mail
+          <small>Jamais publié, transmis seulement à un employeur qui demande une référence.</small>
+          <input type="text" id="contact" maxlength="80" autocomplete="off">
+        </label>
+        <p style="font-weight:600;margin:0 0 4px">Quand peut-on vous joindre ?</p>
+        <div class="choix">
+          <label><input type="checkbox" name="creneau" value="Matin (9 h à 12 h)"> Matin <small>9 h à 12 h</small></label>
+          <label><input type="checkbox" name="creneau" value="Après-midi (14 h à 18 h)"> Après-midi <small>14 h à 18 h</small></label>
+          <label><input type="checkbox" name="creneau" value="Soir (18 h à 20 h)"> Soir <small>18 h à 20 h</small></label>
+        </div>
+        <div class="choix">
+          <label><input type="radio" name="jours" value="Tous les jours" checked> Tous les jours</label>
+          <label><input type="radio" name="jours" value="En semaine seulement"> En semaine seulement</label>
+        </div>
+        <label class="champ">Précision facultative
+          <input type="text" id="precisions" maxlength="80" placeholder="Par exemple : plutôt après 16 h">
+        </label>
+      </fieldset>
+      <div class="erreur cache" role="alert"></div>
+      <div class="nav"><button type="button" class="btn" data-suivant>Continuer</button></div>
+    </section>
+
+    <!-- Étape 2 -->
+    <section class="carte-bloc etape cache" data-etape="2">
+      <h2 tabindex="-1">Ce qui a été fait</h2>
+      <p class="aide">Facultatif. Cochez ce qui correspond. Ces informations restent privées et ne seront pas publiées.</p>
+      <div id="modes-bloc" class="cache">
+        <h3 style="font-size:1.0625rem;color:var(--brand-dark)">Comment l’intervention s’est déroulée</h3>
+        <div class="choix" id="modes"></div>
+      </div>
+      <div id="arbre"></div>
+      <div class="info-box">Merci de ne pas indiquer de détail de santé.</div>
+      <div class="erreur cache" role="alert"></div>
+      <div class="nav">
+        <button type="button" class="btn second" data-retour>Retour</button>
+        <button type="button" class="btn" data-suivant>Continuer</button>
+      </div>
+    </section>
+
+    <!-- Étape 3 -->
+    <section class="carte-bloc etape cache" data-etape="3">
+      <h2 tabindex="-1">Votre appréciation</h2>
+      <p class="aide">Une réponse par ligne.</p>
+      <div id="criteres"></div>
+      <div class="erreur cache" role="alert"></div>
+      <div class="nav">
+        <button type="button" class="btn second" data-retour>Retour</button>
+        <button type="button" class="btn" data-suivant>Continuer</button>
+      </div>
+    </section>
+
+    <!-- Étape 4 -->
+    <section class="carte-bloc etape cache" data-etape="4">
+      <h2 tabindex="-1">Votre commentaire</h2>
+      <p class="aide">Facultatif. Il sera publié tel que vous l’écrivez.</p>
+      <label class="champ"><span class="sr">Commentaire</span>
+        <textarea id="commentaire" maxlength="300" lang="fr" spellcheck="true" autocorrect="on" autocapitalize="sentences" placeholder="Quelques mots sur votre expérience"></textarea>
+      </label>
+      <div class="compteur"><span id="cpt">0</span> / 300</div>
+      <div class="info-box">Pas de détail de santé ni de nom d’autres personnes. Pas de numéro, d’adresse mail ni de lien.</div>
+      <div class="erreur cache" role="alert"></div>
+      <div class="nav">
+        <button type="button" class="btn second" data-retour>Retour</button>
+        <button type="button" class="btn" data-suivant>Voir l’aperçu</button>
+      </div>
+    </section>
+
+    <!-- Étape 5 -->
+    <section class="carte-bloc etape cache" data-etape="5">
+      <h2 tabindex="-1">Vérifier et envoyer</h2>
+      <p class="aide">Voici exactement ce qui sera publié :</p>
+      <div id="apercu"></div>
+      <div class="info-box">Resteront privés : votre nom complet, vos dates, votre contact si vous êtes référence et la liste de ce qui a été fait.</div>
+
+      <h3 class="titre-recap">Tout ce que vous avez renseigné</h3>
+      <div id="recap" class="recap"></div>
+
+      <label class="consent">
+        <input type="checkbox" id="consent">
+        <span id="t-consent"></span>
+      </label>
+
+      <details class="legal" id="legal"><summary>Informations sur vos données</summary><div id="t-legal"></div></details>
+
+      <div id="ts" style="margin:12px 0"></div>
+      <div class="erreur cache" role="alert"></div>
+      <div class="nav">
+        <button type="button" class="btn second" data-retour>Retour</button>
+        <button type="button" class="btn" id="envoyer">Envoyer mon avis</button>
+      </div>
+    </section>
+  </form>
+
+  <div class="fond cache" id="confirm" role="dialog" aria-modal="true" aria-labelledby="c-titre">
+    <div class="boite">
+      <h2 id="c-titre">Dernière vérification</h2>
+      <ul class="verif-liste" id="c-liste"></ul>
+      <p class="aide" style="margin:.6em 0 1em">Une fois envoyé, l’avis ne peut plus être modifié ici.</p>
+      <div class="nav">
+        <button type="button" class="btn second" id="c-non">Je relis encore</button>
+        <button type="button" class="btn" id="c-oui">Oui, envoyer</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="carte-bloc cache" id="merci">
+    <h2>Merci !</h2>
+    <p>Votre avis a bien été enregistré. Il apparaîtra sur la page publique dans quelques minutes.</p>
+    <p class="aide">Vous pouvez fermer cette page.</p>
+  </section>
+
+</main>
+
+<script src="config.js?v=8"></script>
+<script src="metiers.js?v=8"></script>
+<script src="commun.js?v=8"></script>
+<script src="taille.js?v=8"></script>
+<script src="formulaire.js?v=8"></script>
+</body>
+</html>
