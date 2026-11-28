@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gestion des avis</title>
+<link rel="stylesheet" href="style.css?v=6">
+</head>
+<body data-metier="info">
+
+<header class="hero">
+  <div class="hero-in">
+    <p class="petit">Espace réservé</p>
+    <h1>Gestion des avis</h1>
+    <p>Retirer un avis, effacer un contact, exporter les coordonnées des références.</p>
+  </div>
+</header>
+
+<main class="page">
+
+  <section class="carte-bloc" id="s-connexion">
+    <h2>Connexion</h2>
+    <p>Saisis ton jeton d’accès GitHub de gestion. Il reste dans ton navigateur et ne part que vers GitHub.</p>
+    <label class="champ">Jeton d’accès
+      <input type="password" id="jeton" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+    </label>
+    <label class="consent"><input type="checkbox" id="garder"><span>Garder le jeton sur cet appareil (à éviter sur un ordinateur partagé)</span></label>
+    <div class="erreur cache" role="alert" id="erreur-connexion"></div>
+    <div class="nav"><button type="button" class="btn" id="connecter">Se connecter</button></div>
+  </section>
+
+  <div id="s-gestion" class="cache">
+
+    <section class="carte-bloc">
+      <h2>Exporter</h2>
+      <p>Fichier CSV avec nom, prénom, ville, mail et téléphone, qui s’ouvre dans Excel ou LibreOffice.</p>
+      <div class="nav">
+        <button type="button" class="btn" id="exp-refs">Exporter les références</button>
+        <button type="button" class="btn second" id="exp-tous">Exporter tous les avis</button>
+      </div>
+      <p class="aide" id="exp-info"></p>
+    </section>
+
+    <section class="carte-bloc">
+      <h2>Agir sur un compte</h2>
+      <label class="champ">Qui ?
+        <small>Un téléphone, une adresse mail, ou un nom (même partiel).</small>
+        <input type="text" id="cible" maxlength="120" autocomplete="off">
+      </label>
+      <label class="champ">Que faire ?
+        <select id="action">
+          <option value="avis">Supprimer l’avis en entier</option>
+          <option value="contact">Effacer le contact seulement (garder l’avis)</option>
+        </select>
+      </label>
+      <div class="erreur cache" role="alert" id="erreur-action"></div>
+      <div id="choix-cible"></div>
+      <div class="nav"><button type="button" class="btn" id="appliquer">Appliquer</button></div>
+    </section>
+
+    <section class="carte-bloc">
+      <h2>Tous les avis</h2>
+      <label class="champ">Rechercher
+        <input type="text" id="recherche" placeholder="nom, ville…" autocomplete="off">
+      </label>
+      <div class="nav"><button type="button" class="btn second" id="actualiser">Actualiser la liste</button></div>
+      <p class="aide" id="compte"></p>
+      <div id="liste-gestion"></div>
+    </section>
+
+    <div class="nav"><button type="button" class="btn second" id="deconnecter">Se déconnecter</button></div>
+  </div>
+
+  <div class="info-box cache" id="message" role="status"></div>
+</main>
+
+<script src="config.js?v=6"></script>
+<script src="commun.js?v=6"></script>
+<script src="taille.js?v=6"></script>
+<script src="gestion.js?v=8"></script>
+</body>
+</html>
